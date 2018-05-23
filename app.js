@@ -1,73 +1,65 @@
-/*
- * Als erster Start bin ich wieder hier :(
- * Als nöächster Schritt muss das aber in routes verpackt werden!
- */
+// ===== MODULES ===============================================================
+import bodyParser from 'body-parser';
+import express from 'express';
+import path from 'path';
 
-'use strict';
+// ===== MESSENGER =============================================================
+// import ThreadSetup from './messenger-api-helpers/thread-setup';
 
-// Imports dependencies and set up http server
-const
-  request = require('request'),
-  express = require('express'),
-  body_parser = require('body-parser'),
-  app = express().use(body_parser.json()); // creates express http server
+// ===== ROUTES ================================================================
+import index from './routes/index';
+import webhooks from './routes/webhooks';
 
-// Sets server port and logs message on success
-app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
+const app = express();
 
-// Accepts POST requests at /webhook endpoint
-app.post('/webhook', (req, res) => {
+/* =============================================
+   =           Basic Configuration             =
+   ============================================= */
 
-  // Parse the request body from the POST
-  let body = req.body;
+/* ----------  Parsers  ---------- */
 
-  // Check the webhook event is from a Page subscription
-  if (body.object === 'page') {
+app.use(bodyParser.json());
 
-    // Iterate over each entry - there may be multiple if batched
-    body.entry.forEach(function(entry) {
+/* =============================================
+   =                   Routes                  =
+   ============================================= */
 
-      // Get the webhook event. entry.messaging is an array, but
-      // will only ever contain one event, so we get index 0
-      let webhook_event = entry.messaging[0];
-      console.log(webhook_event);
+/* ----------  Primary / Happy Path  ---------- */
 
-    });
+app.use('/', index);
+app.use('/webhook', webhooks);
 
-    // Return a '200 OK' response to all events
-    res.status(200).send('EVENT_RECEIVED');
+/* ----------  Errors  ---------- */
 
-  } else {
-    // Return a '404 Not Found' if event is not from a page subscription
-    res.sendStatus(404);
-  }
-
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
-// Accepts GET requests at the /webhook endpoint
-app.get('/webhook', (req, res) => {
+app.use(function(err, req, res) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  /** UPDATE YOUR VERIFY TOKEN **/
-  const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
-
-  // Parse params from the webhook verification request
-  let mode = req.query['hub.mode'];
-  let token = req.query['hub.verify_token'];
-  let challenge = req.query['hub.challenge'];
-
-  // Check if a token and mode were sent
-  if (mode && token) {
-
-    // Check the mode and token sent are correct
-    if (mode === 'subscribe' && token === VERIFY_TOKEN) {
-
-      // Respond with 200 OK and challenge token from the request
-      console.log('WEBHOOK_VERIFIED');
-      res.status(200).send(challenge);
-
-    } else {
-      // Responds with '403 Forbidden' if verify tokens do not match
-      res.sendStatus(403);
-    }
-  }
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
+
+/* ----------  Messenger setup  ---------- */
+
+//ThreadSetup.setDomainWhitelisting();
+//ThreadSetup.setPersistentMenu();
+//ThreadSetup.setGetStarted();
+
+/* =============================================
+   =                 Port Setup                =
+   ============================================= */
+
+app.listen(app.get('port'), () => {
+  console.log('Node app is running on port', app.get('port'));
+});
+
+module.exports = app; // eslint-disable-line
