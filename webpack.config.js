@@ -3,26 +3,10 @@ var path = require('path');
 const webpack = require('webpack');
 
 module.exports = [{
-  context: path.join(__dirname),
-  entry: 'index',
+  mode: 'development',
+  entry: './app.js',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
-    ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [
-      path.join(__dirname, 'client'),
-      'node_modules'
-    ]
   }
 }];

@@ -7,7 +7,10 @@ import path from 'path';
 // import ThreadSetup from './messenger-api-helpers/thread-setup';
 
 // ===== ROUTES ================================================================
-import index from './routes/index';
+
+/*
+mport index from './routes/index';
+*/
 import webhooks from './routes/webhooks';
 
 const app = express();
@@ -26,7 +29,7 @@ app.use(bodyParser.json());
 
 /* ----------  Primary / Happy Path  ---------- */
 
-app.use('/', index);
+// app.use('/', index);
 app.use('/webhook', webhooks);
 
 /* ----------  Errors  ---------- */
