@@ -5,7 +5,8 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -13,17 +14,15 @@
   },
   "author": "timo",
   "license": "~ tba",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "request": "^2.83.0"
-  },
+  "dependencies": {},
   "engines": {
     "node": "8"
   },
   "devDependencies": {
+    "ajv": "^6.5.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "request": "^2.87.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
   }
