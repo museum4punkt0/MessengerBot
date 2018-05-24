@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "Refactored messenger bot app",
   "private": true,
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./dist/bot.js",
     "build": "webpack"
   },
   "repository": {
