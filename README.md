@@ -7,7 +7,7 @@
 - [x] Nachrichten empfangen & verarbeiten
 - [x] Nachrichten senden
 - [x] Quick Replies senden
-- [ ] Thread Setup (Menü, Get Started, Begrüßung/ Datenschutz)
+- [x] ?? Thread Setup (Menü, Get Started, Begrüßung/ Datenschutz)
 - [ ] Links
 - [ ] Carousels
 - [ ] Lists
