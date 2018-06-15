@@ -19,6 +19,31 @@ const thankYouMessage = [
   }
 ];
 
+const persistentMenu = {
+
+};
+
+const greetingText = {
+  greeting: [
+    {
+      locale:"default",
+      text:"Hi {{user_first_name}}! I'm Refactored. How can I help you?"
+    }, {
+      locale:"de_DE",
+      text:"Hallo {{user_first_name}}! Ich bin Refactored!\nWie kann ich dir weiterhelfen?"
+    }
+  ]
+};
+
+const getStarted = {
+  get_started: {
+    payload: 'GET_STARTED'
+  }
+};
+
 exports.data = {
-  thankYouMessage
+  thankYouMessage,
+  persistentMenu,
+  greetingText,
+  getStarted
 }
