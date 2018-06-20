@@ -12,7 +12,7 @@ const handleMessage = (id, received_message) => {
       case "aktuell-Ausstellungen":
         console.log("Aktuell");
         break;
-      case "opening hours":
+      case "OPENING_HOURS":
         console.log("Öffnungszeiten");
         break;
       case "tickets":
@@ -26,7 +26,7 @@ const handleMessage = (id, received_message) => {
 
 const handlePostback = (id, postback) => {
   console.log("I'm a POSTBACK! Handle me!")
-  
+
   if (postback.payload === "GET_STARTED") {
     send.func.sendHelloMessage(id);
   }
