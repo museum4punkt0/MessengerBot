@@ -1,3 +1,5 @@
+const buttons = require('./buttons');
+
 const thankYouMessage = [
   {
     text: "Thanks for stopping by!"
@@ -52,7 +54,14 @@ const helloMessage = [
     ]
   }
 ];
-  
+
+const startMessage = [
+  {
+    text: "Wie kann ich weiterhelfen!",
+    buttons.but.qr_standardMenu;
+  }
+];
+
 const persistentMenu = {
   persistent_menu: [
     {
