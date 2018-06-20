@@ -58,7 +58,7 @@ const helloMessage = [
 const startMessage = [
   {
     text: "Wie kann ich weiterhelfen!",
-    buttons.but.qr_standardMenu;
+    quick_replies: buttons.but.qr_standardMenu;
   }
 ];
 
