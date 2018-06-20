@@ -8,7 +8,7 @@ const
   bodyParser = require('body-parser'),
   messageEvent = require('./helpers/messageEvent'),
   receive = require('./helpers/receive'),
-  threadSetup = require('./helpers/thread-setup');
+  threadSetup = require('./helpers/threadsetup');
 
 // ===== ROUTES ================================================================
 const app = express();
@@ -16,10 +16,11 @@ const app = express();
 app.use(bodyParser.json()); // creates express http server
 
 // Sets server port and logs message on success
-app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
-
-threadSetup.func.setGetStarted;
-threadSetup.func.setGreetingText;
+app.listen(process.env.PORT || 1337, () => {console.log('webhook is listening');});
+threadSetup.func.testThreadSetup(); // Immer mit () NATÜRLICH!!!!
+threadSetup.func.setGetStarted();
+threadSetup.func.setGreetingText();
+threadSetup.func.setPersistentMenu();
 
 // ===== MESSENGER =============================================================
 app.get('/webhook', (req, res) => {

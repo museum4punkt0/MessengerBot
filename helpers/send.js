@@ -1,7 +1,8 @@
 const
   castArray = require('lodash/castArray'),
   api = require('./api'),
-  messages = require('./messages');
+  messages = require('./messages'),
+  test = require('./test');
 
 // Turns typing indicator on.
 const typingOn = (recipientId) => {
@@ -51,6 +52,11 @@ const sendThankYouMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.thankYouMessage)
 };
 
+const sendHelloMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.helloMessage)
+};
+
 exports.func = {
-  sendThankYouMessage
+  sendThankYouMessage,
+  sendHelloMessage
 }
