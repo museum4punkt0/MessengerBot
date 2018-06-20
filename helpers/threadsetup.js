@@ -7,14 +7,22 @@ const setPersistentMenu = () => {
 };
 
 const setGreetingText = () => {
+  console.log('**Im Greeting Text!**');
   api.func.callThreadAPI(messages.data.greetingText);
 };
 
 const setGetStarted = () => {
+  console.log('**Letas get sth. started!**');
   api.func.callThreadAPI(messages.data.getStarted);
 };
 
+const testThreadSetup = () => {
+  console.log("setup Message");
+}
+
 exports.func = {
-//  setPersistentMenu,
-  setGetStarted
+  setPersistentMenu,
+  setGetStarted,
+  setGreetingText,
+  testThreadSetup
 }

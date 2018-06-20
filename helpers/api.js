@@ -23,7 +23,7 @@ const callAPI = (endPoint, messageDataArray, queryParams = {}) => {
 
   // ready the first message in the array for send.
   const [messageToSend, ...queue] = castArray(messageDataArray);
-  console.log('messageToSend:' + messageToSend);
+  console.log('messageToSend:' + JSON.stringify(messageToSend));
 
   request({
     uri: `https://graph.facebook.com/v2.6/me/${endPoint}`,
