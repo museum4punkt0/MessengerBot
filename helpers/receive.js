@@ -9,13 +9,13 @@ const handleMessage = (id, received_message) => {
     switch (received_message.quick_reply.payload) {
       case "SETUP":
         break;
-      case "aktuell-Ausstellungen":
+      case "EXIBITIONS":
         console.log("Aktuell");
         break;
       case "OPENING_HOURS":
         console.log("Öffnungszeiten");
         break;
-      case "tickets":
+      case "TICKETS":
         console.log("Tickets");
         break;
     }
