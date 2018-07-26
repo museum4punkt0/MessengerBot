@@ -17,6 +17,9 @@ const handleMessage = (id, received_message) => {
       case "TICKETS":
         console.log("Tickets");
         break;
+      default:
+        console.log("None of the above");
+        send.func.sendFailMessage(id);
     }
   } else {
     send.func.sendFailMessage(id);
