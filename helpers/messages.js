@@ -5,11 +5,8 @@ const failMessage = [
     text: "Tut mir leid, aber deine Eingabe kann ich nicht verarbeiten"
   },
   {
-    text: "Bitte nutze die folgenden Buttons...",
+    text: "Bitte nutze die folgenden Buttons oder das Menu am unteren Rand deines Displays",
     quick_replies: buttons.but.qr_standardMenu
-  },
-  {
-    text: "oder das Menu am unteren Rand deines Displays"
   }
 ];
 
