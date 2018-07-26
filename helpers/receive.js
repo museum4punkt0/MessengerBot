@@ -34,6 +34,8 @@ const handlePostback = (id, postback) => {
 
   if (postback.payload === "GET_STARTED") {
     send.func.sendStartMessageFirst(id);
+  } else {
+    send.func.sendFailMessage(id);
   }
 };
 
