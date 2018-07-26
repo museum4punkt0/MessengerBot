@@ -8,7 +8,7 @@ const handleMessage = (id, received_message) => {
     switch (received_message.quick_reply.payload) {
       case "SETUP":
         break;
-      case "EXIBITIONS":
+      case "EXHIBITIONS":
         console.log("Aktuell");
         break;
       case "OPENING_HOURS":

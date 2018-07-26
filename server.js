@@ -17,7 +17,6 @@ app.use(bodyParser.json()); // creates express http server
 
 // Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => {console.log('webhook is listening');});
-threadSetup.func.testThreadSetup(); // Immer mit () NATÜRLICH!!!!
 threadSetup.func.setGetStarted();
 threadSetup.func.setGreetingText();
 threadSetup.func.setPersistentMenu();

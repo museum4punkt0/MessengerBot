@@ -2,7 +2,7 @@ const qr_standardMenu = [
   {
     content_type:"text",
     title:"Aktuell",
-    payload:"EXIBITIONS"
+    payload:"EXHIBITIONS"
   },
   {
     content_type:"text",

@@ -31,6 +31,36 @@ const greetingText = {
   ]
 };
 
+const openingHours = [
+  {
+    "text": `Heute geöffnet bis 18:00 Uhr`
+  },
+  {
+    "text": `Montag geschlossen\nDienstag-Sonntag 10:00-18:00 Uhr\nDonnertag bis 20:00 Uhr`
+  },
+  {
+    "text": `30 Minuten vor Schließung ist letzter Einlass`
+  },
+  {
+    "text": `Für Feiertage gibt es abweichende Zeiten.`
+  },
+  {
+    "text": `Möchtest du sie wissen?`,
+    "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"Ja, bitte",
+        "payload":"OPENING_HOURS_HOLIDAYS"
+      },
+       {
+        "content_type":"text",
+        "title":"Nein",
+        "payload":"DONE"
+      }
+    ]
+  }
+];
+
 const persistentMenu = {
   persistent_menu: [
     {
@@ -112,39 +142,11 @@ const thankYouMessage = [
   }
 ];
 
-/* const helloMessage = [
-  {
-    text: "Hi! Let's"
-  },
-  {
-    text:"get"
-  },
-  {
-    text: "started!",
-    quick_replies:[
-      {
-        content_type: 'text',
-        title: 'Thank you, bot!',
-        payload: 'THANK_YOU'
-      },
-      {
-        content_type: 'text',
-        title: 'Thank you, bot!',
-        payload: 'THANK_YOU'
-      },
-      {
-        content_type: 'text',
-        title: 'Setup!',
-        payload: "SETUP"
-      }
-    ]
-  }
-]; */
-
 exports.data = {
   failMessage,
   getStarted,
   greetingText,
+  openingHours,
   persistentMenu,
   startMessage,
   startMessageFirst,

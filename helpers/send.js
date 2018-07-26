@@ -52,6 +52,9 @@ const sendFailMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.failMessage)
 };
 
+const sendOpeningHours = (recipientId) => {
+  sendMessage(recipientId, messages.data.openingHours)
+};
 const sendStartMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.startMessage)
 };
