@@ -48,6 +48,18 @@ const sendMessage = (recipientId, messagePayloads) => {
 
 
 // Hier Nachrichten aufrufen, die Inhalte sind in messages.js definiert!
+const sendFailMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.failMessage)
+};
+
+const sendStartMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.startMessage)
+};
+
+const sendStartMessageFirst = (recipientId) => {
+  sendMessage(recipientId, messages.data.startMessageFirst)
+};
+
 const sendThankYouMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.thankYouMessage)
 };
@@ -57,6 +69,9 @@ const sendHelloMessage = (recipientId) => {
 };
 
 exports.func = {
+  sendFailMessage,
+  sendStartMessage,
+  sendStartMessageFirst,
   sendThankYouMessage,
   sendHelloMessage
 }

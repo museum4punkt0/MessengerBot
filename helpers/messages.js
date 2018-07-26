@@ -1,66 +1,35 @@
 const buttons = require('./buttons');
 
-const thankYouMessage = [
+const failMessage = [
   {
-    text: "Thanks for stopping by!"
+    text: "Tut mir leid, aber deine Eingabe kann ich nicht verarbeiten"
   },
   {
-    text: "Man I'm so thankful!",
-    quick_replies:[
-      {
-        content_type: 'text',
-        title: 'Thank you, bot!',
-        payload: 'THANK_YOU'
-      },
-      {
-        content_type: 'text',
-        title: 'Thank you, bot!',
-        payload: 'THANK_YOU'
-      },
-      {
-        content_type: 'text',
-        title: 'Setup!',
-        payload: "SETUP"
-      }
-    ]
-  }
-];
-
-const helloMessage = [
-  {
-    text: "Hi! Let's"
-  },
-  {
-    text:"get"
-  },
-  {
-    text: "started!",
-    quick_replies:[
-      {
-        content_type: 'text',
-        title: 'Thank you, bot!',
-        payload: 'THANK_YOU'
-      },
-      {
-        content_type: 'text',
-        title: 'Thank you, bot!',
-        payload: 'THANK_YOU'
-      },
-      {
-        content_type: 'text',
-        title: 'Setup!',
-        payload: "SETUP"
-      }
-    ]
-  }
-];
-
-const startMessage = [
-  {
-    text: "Wie kann ich weiterhelfen!",
+    text: "Bitte nutze die folgenden Buttons...",
     quick_replies: buttons.but.qr_standardMenu
+  },
+  {
+    text: "oder das Menu am unteren Rand deines Displays"
   }
 ];
+
+const getStarted = {
+  get_started: {
+    payload: 'GET_STARTED'
+  }
+};
+
+const greetingText = {
+  greeting: [
+    {
+      locale:"default",
+      text:"Hi {{user_first_name}}! I'm Refactored. How can I help you?"
+    }, {
+      locale:"de_DE",
+      text:"Hallo {{user_first_name}}! Mit dem Klick auf \"Los geht\'s\" stimmst du den folgenden Punkten zu:\n- https://www.smb.museum\n- den Datenschutzbestimmungen"
+    }
+  ]
+};
 
 const persistentMenu = {
   persistent_menu: [
@@ -100,28 +69,84 @@ const persistentMenu = {
   ]
 };
 
-const greetingText = {
-  greeting: [
-    {
-      locale:"default",
-      text:"Hi {{user_first_name}}! I'm Refactored. How can I help you?"
-    }, {
-      locale:"de_DE",
-      text:"Hallo {{user_first_name}}! Mit dem Klick auf \"Los geht\'s\" stimmst du den folgenden Punkten zu:\n- https://www.smb.museum\n- den Datenschutzbestimmungen"
-    }
-  ]
-};
-
-const getStarted = {
-  get_started: {
-    payload: 'GET_STARTED'
+const startMessage = [
+  {
+    text: "Wie kann ich weiterhelfen!",
+    quick_replies: buttons.but.qr_standardMenu
   }
-};
+];
+
+const startMessageFirst = [
+  {
+    text: "Hallo!"
+  },
+  {
+    text: "Wie kann ich weiterhelfen!",
+    quick_replies: buttons.but.qr_standardMenu
+  }
+];
+
+const thankYouMessage = [
+  {
+    text: "Thanks for stopping by!"
+  },
+  {
+    text: "Man I'm so thankful!",
+    quick_replies:[
+      {
+        content_type: 'text',
+        title: 'Thank you, bot!',
+        payload: 'THANK_YOU'
+      },
+      {
+        content_type: 'text',
+        title: 'Thank you, bot!',
+        payload: 'THANK_YOU'
+      },
+      {
+        content_type: 'text',
+        title: 'Setup!',
+        payload: "SETUP"
+      }
+    ]
+  }
+];
+
+/* const helloMessage = [
+  {
+    text: "Hi! Let's"
+  },
+  {
+    text:"get"
+  },
+  {
+    text: "started!",
+    quick_replies:[
+      {
+        content_type: 'text',
+        title: 'Thank you, bot!',
+        payload: 'THANK_YOU'
+      },
+      {
+        content_type: 'text',
+        title: 'Thank you, bot!',
+        payload: 'THANK_YOU'
+      },
+      {
+        content_type: 'text',
+        title: 'Setup!',
+        payload: "SETUP"
+      }
+    ]
+  }
+]; */
 
 exports.data = {
-  thankYouMessage,
-  helloMessage,
-  persistentMenu,
+  failMessage;
+  getStarted,
   greetingText,
-  getStarted
+  persistentMenu,
+  startMessage,
+  startMessageFirst,
+  thankYouMessage
 }
