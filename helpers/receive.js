@@ -13,7 +13,7 @@ const handleMessage = (id, received_message) => {
         break;
       case "OPENING_HOURS":
         console.log("Öffnungszeiten");
-        send.func.sendOpeningHours;
+        send.func.sendOpeningHours(id);
         break;
       case "TICKETS":
         console.log("Tickets");
