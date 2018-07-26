@@ -142,7 +142,7 @@ const thankYouMessage = [
 ]; */
 
 exports.data = {
-  failMessage;
+  failMessage,
   getStarted,
   greetingText,
   persistentMenu,
