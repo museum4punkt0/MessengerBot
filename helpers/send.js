@@ -73,6 +73,7 @@ const sendHelloMessage = (recipientId) => {
 
 exports.func = {
   sendFailMessage,
+  sendOpeningHours,
   sendStartMessage,
   sendStartMessageFirst,
   sendThankYouMessage,
