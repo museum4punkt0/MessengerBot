@@ -52,7 +52,7 @@ const openingHoursHolidays = [
     text: `An Feiertagen sind die Häuser der Staatlichen Museen zu Berlin in der Regel wie an Sonntagen (10-18 Uhr) geöffnet.`
   },
   {
-    attachment:
+    attachment:{
       type: "template",
       payload: {
         template_type: "button",
@@ -67,6 +67,7 @@ const openingHoursHolidays = [
           }
         ]
       }
+    }
   }
 ];
 
