@@ -59,11 +59,11 @@ const openingHoursHolidays = [
         text: "Detaillierte Zeiten und Ausnahmen findest Du hier:",
         buttons: [
           {
-            "type":"web_url",
-            "url":"https://www.smb.museum/besuch-planen/sonderoeffnungszeiten-an-feiertagen.html",
-            "title":"sonderoeffnungszeiten",
-            "webview_height_ratio": "full>",
-            "messenger_extensions": "false>",
+            type:"web_url",
+            url:"https://www.smb.museum/besuch-planen/sonderoeffnungszeiten-an-feiertagen.html",
+            title:"Weitere Zeiten",
+            webview_height_ratio: "full",
+            messenger_extensions: "false",
           }
         ]
       }
