@@ -63,7 +63,7 @@ const openingHoursHolidays = [
             type:"web_url",
             url:"https://www.smb.museum/besuch-planen/sonderoeffnungszeiten-an-feiertagen.html",
             title:"Weitere Zeiten",
-            webview_height_ratio: "full",
+            webview_height_ratio: "tall",
             messenger_extensions: "false",
           }
         ]
