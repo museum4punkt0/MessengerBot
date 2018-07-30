@@ -55,6 +55,11 @@ const sendFailMessage = (recipientId) => {
 const sendOpeningHours = (recipientId) => {
   sendMessage(recipientId, messages.data.openingHours)
 };
+
+const sendOpeningHoursHolidays = (recipientId) => {
+  sendMessage(recipientId, messages.data.openingHoursHolidays)
+};
+
 const sendStartMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.startMessage)
 };
@@ -74,6 +79,7 @@ const sendHelloMessage = (recipientId) => {
 exports.func = {
   sendFailMessage,
   sendOpeningHours,
+  sendOpeningHoursHolidays,
   sendStartMessage,
   sendStartMessageFirst,
   sendThankYouMessage,

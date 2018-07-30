@@ -15,17 +15,25 @@ const handleMessage = (id, received_message) => {
         console.log("Öffnungszeiten");
         send.func.sendOpeningHours(id);
         break;
+      case "OPENING_HOURS_HOLIDAYS":
+        console.log("Öffnungszeiten");
+        send.func.sendOpeningHoursHolidays(id);
+        break;
       case "TICKETS":
         console.log("Tickets");
+        break;
+      case "DONE":
+        console.log("User says: done.");
+        send.func.sendStartMessage(id);
         break;
       default:
         console.log("None of the above");
         send.func.sendFailMessage(id);
+        break;
     }
   } else {
     send.func.sendFailMessage(id);
   }
-
   return;
 };
 

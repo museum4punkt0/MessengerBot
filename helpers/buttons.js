@@ -1,8 +1,21 @@
+const qr_openingHours = [
+  {
+    content_type:"text",
+    title:"Ja, bitte",
+    payload:"OPENING_HOURS_HOLIDAYS"
+  },
+   {
+    content_type:"text",
+    title:"Nein",
+    payload:"DONE"
+  }
+]
+
 const qr_standardMenu = [
   {
     content_type:"text",
     title:"Aktuell",
-    payload:"EXHIBITIONS"
+    payload:"EXHIBITIONSs"
   },
   {
     content_type:"text",
@@ -17,5 +30,6 @@ const qr_standardMenu = [
 ];
 
 exports.but = {
+  qr_openingHours,
   qr_standardMenu
 }

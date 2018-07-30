@@ -30,31 +30,43 @@ const greetingText = {
 
 const openingHours = [
   {
-    "text": `Heute geöffnet bis 18:00 Uhr`
+    text: `Heute geöffnet bis 18:00 Uhr`
   },
   {
-    "text": `Montag geschlossen\nDienstag-Sonntag 10:00-18:00 Uhr\nDonnertag bis 20:00 Uhr`
+    text: `Montag geschlossen\nDienstag-Sonntag 10:00-18:00 Uhr\nDonnertag bis 20:00 Uhr`
   },
   {
-    "text": `30 Minuten vor Schließung ist letzter Einlass`
+    text: `30 Minuten vor Schließung ist letzter Einlass`
   },
   {
-    "text": `Für Feiertage gibt es abweichende Zeiten.`
+    text: `Für Feiertage gibt es abweichende Zeiten.`
   },
   {
-    "text": `Möchtest du sie wissen?`,
-    "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"Ja, bitte",
-        "payload":"OPENING_HOURS_HOLIDAYS"
-      },
-       {
-        "content_type":"text",
-        "title":"Nein",
-        "payload":"DONE"
+    text: `Möchtest du sie wissen?`,
+    quick_replies: buttons.but.qr_openingHours
+  }
+];
+
+const openingHoursHolidays = [
+  {
+    text: `An Feiertagen sind die Häuser der Staatlichen Museen zu Berlin in der Regel wie an Sonntagen (10-18 Uhr) geöffnet.`
+  },
+  {
+    attachment:
+      type: "template",
+      payload: {
+        template_type: "button",
+        text: "Detaillierte Zeiten und Ausnahmen findest Du hier:"
+        buttons: [
+          {
+            "type":"web_url",
+            "url":"https://www.smb.museum/besuch-planen/sonderoeffnungszeiten-an-feiertagen.html",
+            "title":"sonderoeffnungszeiten",
+            "webview_height_ratio": "full>",
+            "messenger_extensions": "false>",
+          }
+        ]
       }
-    ]
   }
 ];
 
@@ -144,6 +156,7 @@ exports.data = {
   getStarted,
   greetingText,
   openingHours,
+  openingHoursHolidays,
   persistentMenu,
   startMessage,
   startMessageFirst,
