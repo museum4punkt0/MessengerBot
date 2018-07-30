@@ -57,8 +57,13 @@ const sendOpeningHours = (recipientId) => {
 };
 
 const sendOpeningHoursHolidays = (recipientId) => {
-  sendMessage(recipientId, messages.data.openingHoursHolidays),
-  sendMessage(recipientId, messages.data.startMessage)
+  sendMessage(
+    recipientId,
+    [
+      messages.data.openingHoursHolidays,
+      messages.data.openingHoursHolidaysLink,
+      messages.data.startMessage
+    ]);
 };
 
 const sendStartMessage = (recipientId) => {

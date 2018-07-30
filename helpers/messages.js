@@ -50,7 +50,10 @@ const openingHours = [
 const openingHoursHolidays = [
   {
     text: `An Feiertagen sind die Häuser der Staatlichen Museen zu Berlin in der Regel wie an Sonntagen (10-18 Uhr) geöffnet.`
-  },
+  }
+];
+
+const openingHoursHolidaysLink = [
   {
     attachment:{
       type: "template",
@@ -158,6 +161,7 @@ exports.data = {
   greetingText,
   openingHours,
   openingHoursHolidays,
+  openingHoursHolidaysLink,
   persistentMenu,
   startMessage,
   startMessageFirst,
