@@ -1,4 +1,5 @@
 const buttons = require('./buttons');
+const startText = "Wie kann ich weiterhelfen!";
 
 const failMessage = [
   {
@@ -50,10 +51,7 @@ const openingHours = [
 const openingHoursHolidays = [
   {
     text: `An Feiertagen sind die Häuser der Staatlichen Museen zu Berlin in der Regel wie an Sonntagen (10-18 Uhr) geöffnet.`
-  }
-];
-
-const openingHoursHolidaysLink = [
+  },
   {
     attachment:{
       type: "template",
@@ -71,6 +69,10 @@ const openingHoursHolidaysLink = [
         ]
       }
     }
+  },
+  {
+    text: startText,
+    quick_replies: buttons.but.qr_standardMenu
   }
 ];
 
@@ -161,7 +163,6 @@ exports.data = {
   greetingText,
   openingHours,
   openingHoursHolidays,
-  openingHoursHolidaysLink,
   persistentMenu,
   startMessage,
   startMessageFirst,
