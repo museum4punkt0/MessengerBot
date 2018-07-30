@@ -56,7 +56,7 @@ const openingHoursHolidays = [
       type: "template",
       payload: {
         template_type: "button",
-        text: "Detaillierte Zeiten und Ausnahmen findest Du hier:"
+        text: "Detaillierte Zeiten und Ausnahmen findest Du hier:",
         buttons: [
           {
             "type":"web_url",
