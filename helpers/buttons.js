@@ -1,3 +1,6 @@
+/* const buildQuickReplies = (qrParameter) => {
+} */
+
 const qr_openingHours = [
   {
     content_type:"text",

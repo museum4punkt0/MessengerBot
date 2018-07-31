@@ -24,7 +24,7 @@ const greetingText = {
       text:"Hi {{user_first_name}}! I'm Refactored. How can I help you?"
     }, {
       locale:"de_DE",
-      text:"Hallo {{user_first_name}}! Mit dem Klick auf \"Los geht\'s\" stimmst du den folgenden Punkten zu:\n- https://www.smb.museum\n- den Datenschutzbestimmungen"
+      text:"Hallo {{user_first_name}}! Mit dem Klick auf \"Los geht's\" stimmst du den folgenden Punkten zu:\n- https://www.smb.museum\n- den Datenschutzbestimmungen"
     }
   ]
 };

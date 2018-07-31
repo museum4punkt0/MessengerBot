@@ -1,3 +1,5 @@
+/* eslint no-console: "log" */
+
 const
   api = require('./api'),
   messages = require('./messages');

@@ -1,8 +1,7 @@
 const
   castArray = require('lodash/castArray'),
   api = require('./api'),
-  messages = require('./messages'),
-  test = require('./test');
+  messages = require('./messages');
 
 // Turns typing indicator on.
 const typingOn = (recipientId) => {

@@ -1,5 +1,7 @@
+/* eslint no-console: "log" */
+
 const send = require('./send');
-const threadSetup = require('./threadsetup');
+// const threadSetup = require('./threadsetup');
 
 const handleMessage = (id, received_message) => {
   console.log("I'm a MESSAGE! Handle me!");
