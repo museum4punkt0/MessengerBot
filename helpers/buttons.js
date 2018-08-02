@@ -33,7 +33,7 @@ const qr_standardMenu = [
 const qr_tickets = [
    {
     content_type: "text",
-    title: "Nein, Tickets kaufen!",
+    title: "Nein, Tickets kaufen",
     payload: "BUY_TICKETS"
   },
   {

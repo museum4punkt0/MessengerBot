@@ -133,7 +133,7 @@ const startMessageFirst = [
 
 const ticketMessage = [
   {
-    text: "Grundsätzlich gilt in den Staatlichen Museen zu Berlin:\n-Unter 18 Jahren: Eintritt frei!\n- Bezieher von Transferleistungen: Eintritt frei!\n- Schüler und Studenten älter als 18 Jahre: ermäßigter Eintritt (50%)"
+    text: "Grundsätzlich gilt in den Staatlichen Museen zu Berlin:\n\n- Unter 18 Jahren: Eintritt frei!\n\n- Bezieher von Transferleistungen: Eintritt frei!\n\n- Schüler und Studenten älter als 18 Jahre: ermäßigter Eintritt (50%)"
   },
   {
     text: "Eintritt Bode-Museum:\nregulär 12€ - ermäßigt 6€"
