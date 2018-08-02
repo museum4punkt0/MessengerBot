@@ -1,5 +1,4 @@
-// Zum entschlacken die 'Retries' rausgeworfen!
-//
+/* eslint no-console: "log" */
 
 const
   request = require('request'),

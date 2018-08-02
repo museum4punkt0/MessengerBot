@@ -4,8 +4,6 @@ const send = require('./send');
 // const threadSetup = require('./threadsetup');
 
 const handleMessage = (id, received_message) => {
-  console.log("I'm a MESSAGE! Handle me!");
-
   if (received_message.quick_reply) {
     switch (received_message.quick_reply.payload) {
       case "SETUP":
@@ -23,6 +21,22 @@ const handleMessage = (id, received_message) => {
         break;
       case "TICKETS":
         console.log("Tickets");
+        send.func.sendTicketMessage(id);
+        break;
+      case "BUY_TICKETS":
+        send.func.sendBuyTicketMessage(id);
+        break;
+      case "MI_TICKET":
+        send.func.sendMiTicketMessage(id);
+        break;
+      case "THREE_DAYS_TICKET":
+        send.func.sendThreeDaysTicketMessage(id);
+        break;
+      case "YEAR_TICKET":
+        send.func.sendYearTicketMessage(id);
+        break;
+      case "ALL_TICKET_OPTIONS":
+        send.func.sendAllTicketOptionsMessage(id);
         break;
       case "DONE":
         console.log("User says: done.");

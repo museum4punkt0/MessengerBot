@@ -131,6 +131,37 @@ const startMessageFirst = [
   }
 ];
 
+const ticketMessage = [
+  {
+    text: "Grundsätzlich gilt in den Staatlichen Museen zu Berlin:\n-Unter 18 Jahren: Eintritt frei!\n- Bezieher von Transferleistungen: Eintritt frei!\n- Schüler und Studenten älter als 18 Jahre: ermäßigter Eintritt (50%)"
+  },
+  {
+    text: "Eintritt Bode-Museum:\nregulär 12€ - ermäßigt 6€"
+  },
+  {
+    attachment:{
+      type: "template",
+      payload: {
+        template_type: "button",
+        text: "Weitere Infos:",
+        buttons: [
+          {
+            type:"web_url",
+            url:"http://www.smb.museum/besuch-planen/ermaessigungen-freier-eintritt.html",
+            title:"Ermässigungen",
+            webview_height_ratio: "tall",
+            messenger_extensions: "false",
+          }
+        ]
+      }
+    }
+  },
+  {
+    text: `Planst du weitere Ausstellungen und Häuser zu besuchen?`,
+    quick_replies: buttons.but.qr_tickets
+  }
+]
+
 const thankYouMessage = [
   {
     text: "Thanks for stopping by!"
@@ -166,5 +197,6 @@ exports.data = {
   persistentMenu,
   startMessage,
   startMessageFirst,
-  thankYouMessage
+  thankYouMessage,
+  ticketMessage
 }
