@@ -1,9 +1,10 @@
 const buttons = require('./buttons');
 const startText = "Wie kann ich weiterhelfen!";
+const startTextSecondTime = "Kann sonst noch helfen?"
 
 const buyTicketMessage = [
   {
-    text: "Vor Ort:\nKasse des Bode-Museums im Eingangsbereich auf der rechten Seite"
+    text: "Vor Ort: An Kasse des Bode-Museums im Eingangsbereich auf der rechten Seite."
   },
   {
     attachment:{
@@ -24,7 +25,7 @@ const buyTicketMessage = [
     }
   },
   {
-    text: startText,
+    text: startTextSecondTime,
     quick_replies: buttons.but.qr_standardMenu
   }
 ];
@@ -99,7 +100,7 @@ const openingHoursHolidays = [
     }
   },
   {
-    text: startText,
+    text: startTextSecondTime,
     quick_replies: buttons.but.qr_standardMenu
   }
 ];
@@ -144,7 +145,7 @@ const persistentMenu = {
 
 const startMessage = [
   {
-    text: "Wie kann ich weiterhelfen!",
+    text: startText,
     quick_replies: buttons.but.qr_standardMenu
   }
 ];
@@ -154,7 +155,7 @@ const startMessageFirst = [
     text: "Hallo!"
   },
   {
-    text: "Wie kann ich weiterhelfen!",
+    text: startText,
     quick_replies: buttons.but.qr_standardMenu
   }
 ];
