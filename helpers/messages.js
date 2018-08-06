@@ -1,6 +1,34 @@
 const buttons = require('./buttons');
 const startText = "Wie kann ich weiterhelfen!";
 
+const buyTicketMessage = [
+  {
+    text: "Vor Ort:\nKasse des Bode-Museums im Eingangsbereich auf der rechten Seite"
+  },
+  {
+    attachment:{
+      type: "template",
+      payload: {
+        template_type: "button",
+        text: "Online unter:",
+        buttons: [
+          {
+            type:"web_url",
+            url:"https://shop.smb.museum/#/tickets/list?date=2018-02-22&museum_id=27&ticketSelection=%5Bobject%20Object%5D",
+            title:"Tickets",
+            webview_height_ratio: "tall",
+            messenger_extensions: "false",
+          }
+        ]
+      }
+    }
+  },
+  {
+    text: startText,
+    quick_replies: buttons.but.qr_standardMenu
+  }
+];
+
 const failMessage = [
   {
     text: "Tut mir leid, aber deine Eingabe kann ich nicht verarbeiten"
@@ -189,6 +217,7 @@ const thankYouMessage = [
 ];
 
 exports.data = {
+  buyTicketMessage,
   failMessage,
   getStarted,
   greetingText,
