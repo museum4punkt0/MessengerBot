@@ -58,8 +58,27 @@ const qr_tickets = [
   }
 ];
 
+const qr_ticketMenu = [
+  {
+    content_type:"text",
+    title:"Ja, bitte!",
+    payload:"alle Tickets"
+  },
+  {
+    content_type:"text",
+    title:"Nein, Tickets kaufen",
+    payload:"Tickets kaufen"
+  },
+  {
+    content_type:"text",
+    title:"Nein, nichts weiter",
+    payload:"Done"
+  }
+];
+
 exports.but = {
   qr_openingHours,
   qr_standardMenu,
-  qr_tickets
+  qr_tickets,
+  qr_ticketMenu
 }

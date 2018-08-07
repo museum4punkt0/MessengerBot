@@ -2,7 +2,8 @@ const buttons = require('./buttons');
 const links = require('./links');
 
 const startText = "Wie kann ich weiterhelfen!";
-const startTextSecondTime = "Kann sonst noch helfen?"
+const startTextSecondTime = "Kann sonst noch helfen?";
+const ticketOptions = "Möchtest du alle weitere Ticket-Optionen erfahren?";
 
 const buyTicketMessage = [
   {
@@ -42,6 +43,22 @@ const greetingText = {
     }
   ]
 };
+
+const miTicketMessage = [
+  {
+    text: "Wenn du am selben Tag mehrere Museen auf der Museuminsel besuchen willst, ist das hier vielleicht interssant für dich!"
+  },
+  {
+    text: "Museumsinsel-Ticket:\nregulär 18€ - ermäßigt 9€"
+  },
+  {
+    text: "Ganztägig Eintritt in folgenden Häusern:\n- Bode-Museum\n- Pergamonmuseum\n- Altes Museum\n- Neues Museum\n- Alte Nationalgalerie"
+  },
+  {
+    text: ticketOptions,
+    quick_replies: buttons.but.qr_ticketMenu
+  }
+];
 
 const openingHours = [
   {
@@ -173,6 +190,7 @@ exports.data = {
   failMessage,
   getStarted,
   greetingText,
+  miTicketMessage,
   openingHours,
   openingHoursHolidays,
   persistentMenu,
