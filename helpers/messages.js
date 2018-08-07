@@ -135,24 +135,7 @@ const ticketMessage = [
   {
     text: "Eintritt Bode-Museum:\nregulär 12€ - ermäßigt 6€"
   },
-  {
-    attachment:{
-      type: "template",
-      payload: {
-        template_type: "button",
-        text: "Weitere Infos:",
-        buttons: [
-          {
-            type:"web_url",
-            url:"http://www.smb.museum/besuch-planen/ermaessigungen-freier-eintritt.html",
-            title:"Ermässigungen",
-            webview_height_ratio: "tall",
-            messenger_extensions: "false",
-          }
-        ]
-      }
-    }
-  },
+    links.func.buildLinks("Weitere Infos:", "http://www.smb.museum/besuch-planen/ermaessigungen-freier-eintritt.html", "Ermässigungen"),
   {
     text: `Planst du weitere Ausstellungen und Häuser zu besuchen?`,
     quick_replies: buttons.but.qr_tickets
