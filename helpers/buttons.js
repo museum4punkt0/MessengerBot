@@ -62,17 +62,17 @@ const qr_ticketMenu = [
   {
     content_type:"text",
     title:"Ja, bitte!",
-    payload:"alle Tickets"
+    payload:"ALL_TICKET_OPTIONS"
   },
   {
     content_type:"text",
     title:"Nein, Tickets kaufen",
-    payload:"Tickets kaufen"
+    payload:"BUY_TICKETS"
   },
   {
     content_type:"text",
     title:"Nein, nichts weiter",
-    payload:"Done"
+    payload:"DONE"
   }
 ];
 
