@@ -79,6 +79,10 @@ const sendThankYouMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.thankYouMessage)
 };
 
+const sendThreeDaysTicketMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.threeDaysTicketMessage)
+};
+
 const sendTicketMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.ticketMessage)
 };
@@ -96,6 +100,7 @@ exports.func = {
   sendStartMessage,
   sendStartMessageFirst,
   sendThankYouMessage,
+  sendThreeDaysTicketMessage,
   sendTicketMessage,
   sendHelloMessage
 }

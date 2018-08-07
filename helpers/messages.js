@@ -185,6 +185,22 @@ const thankYouMessage = [
   }
 ];
 
+const threeDaysTicketMessage = [
+  {
+    text: "Wenn du innerhalb von drei Tagen mehrere Museen in Berlin besuchen willst, ist das hier vielleicht interessant für dich!"
+  },
+  {
+    text: "Museumspass Berlin:\nregulär 29€ - ermäßigt 14,50€"
+  },
+  {
+    text: "Er gilt drei Tage in allen Häusern der Staatlichen Museen und noch weiteren Berliner Museen."
+  },
+  {
+    text: ticketOptions,
+    quick_replies: buttons.but.qr_ticketMenu
+  }
+]
+
 exports.data = {
   buyTicketMessage,
   failMessage,
@@ -197,5 +213,6 @@ exports.data = {
   startMessage,
   startMessageFirst,
   thankYouMessage,
+  threeDaysTicketMessage,
   ticketMessage
 }
