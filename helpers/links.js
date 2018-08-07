@@ -19,9 +19,8 @@ const buildLinks = (linkText, linkUrl, linkTitle) => {
   }
 }
 
-const buyTicketLink = buildLinks("Online unter:", "https://shop.smb.museum/#/tickets/list?date=2018-02-22&museum_id=27&ticketSelection=%5Bobject%20Object%5D", "Tickets");
+// const buyTicketLink = buildLinks("Online unter:", "https://shop.smb.museum/#/tickets/list?date=2018-02-22&museum_id=27&ticketSelection=%5Bobject%20Object%5D", "Tickets");
 
-
-exports.link = {
-  buyTicketLink
+exports.func = {
+  buildLinks
 }

@@ -8,7 +8,7 @@ const buyTicketMessage = [
   {
     text: "Vor Ort: An Kasse des Bode-Museums im Eingangsbereich auf der rechten Seite."
   },
-  links.link.buyTicketLink,
+    links.func.buildLinks("Online unter:", "https://shop.smb.museum/#/tickets/list?date=2018-02-22&museum_id=27&ticketSelection=%5Bobject%20Object%5D", "Tickets"),
   {
     text: startTextSecondTime,
     quick_replies: buttons.but.qr_standardMenu
@@ -66,24 +66,7 @@ const openingHoursHolidays = [
   {
     text: `An Feiertagen sind die Häuser der Staatlichen Museen zu Berlin in der Regel wie an Sonntagen (10-18 Uhr) geöffnet.`
   },
-  {
-    attachment:{
-      type: "template",
-      payload: {
-        template_type: "button",
-        text: "Detaillierte Zeiten und Ausnahmen findest Du hier:",
-        buttons: [
-          {
-            type:"web_url",
-            url:"https://www.smb.museum/besuch-planen/sonderoeffnungszeiten-an-feiertagen.html",
-            title:"Weitere Zeiten",
-            webview_height_ratio: "tall",
-            messenger_extensions: "false",
-          }
-        ]
-      }
-    }
-  },
+    links.func.buildLinks("Detaillierte Zeiten und Ausnahmen findest Du hier:", "https://www.smb.museum/besuch-planen/sonderoeffnungszeiten-an-feiertagen.html", "Weitere Zeiten"),
   {
     text: startTextSecondTime,
     quick_replies: buttons.but.qr_standardMenu
