@@ -201,6 +201,19 @@ const threeDaysTicketMessage = [
   }
 ]
 
+const yearTicketMessage = [
+  {
+    text: "Ein Jahr lang ins Museum so oft du willst?"
+  },
+  {
+    text: "Jahreskarte CLASSIC (alle Dauerausstellungen)\nregulär 50€ - ermäßigt 25€\n\nJahreskarte CLASSIC PLUS (alle Dauer- und Sonderausstellungen)\nregulär 100€ - ermäßigt 50€"
+  },
+  {
+    text: ticketOptions,
+    quick_replies: buttons.but.qr_ticketMenu
+  }
+]
+
 exports.data = {
   buyTicketMessage,
   failMessage,
@@ -214,5 +227,6 @@ exports.data = {
   startMessageFirst,
   thankYouMessage,
   threeDaysTicketMessage,
-  ticketMessage
+  ticketMessage,
+  yearTicketMessage
 }
