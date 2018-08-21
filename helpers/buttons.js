@@ -1,3 +1,26 @@
+const qr_tickets = [
+   {
+    content_type: "text",
+    title: "nächste Veranstaltung",
+    payload: "NEXT_EVENT"
+  },
+  {
+    content_type: "text",
+    title: "Angebote für Kinder",
+    payload: "EVENTS_KIDS"
+  },
+  {
+    content_type: "text",
+    title: "Angebote für Erwachsene",
+    payload: "EVENTS_ADULTS"
+  },
+  {
+    content_type: "text",
+    title: "Nein, danke.",
+    payload: "DONE"
+  }
+];
+
 const qr_openingHours = [
   {
     content_type: "text",

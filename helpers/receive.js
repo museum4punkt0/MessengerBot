@@ -9,18 +9,21 @@ const handleMessage = (id, received_message) => {
       case "SETUP":
         break;
       case "EXHIBITIONS":
-        console.log("Aktuell");
+        send.func.sendExhibitionsMessage(id);
+        break;
+      case "NEXT_EVENT":
+        break;
+      case "EVENTS_KIDS":
+        break;
+      case "EVENTS_ADULTS":
         break;
       case "OPENING_HOURS":
-        console.log("Öffnungszeiten");
         send.func.sendOpeningHours(id);
         break;
       case "OPENING_HOURS_HOLIDAYS":
-        console.log("Öffnungszeiten");
         send.func.sendOpeningHoursHolidays(id);
         break;
       case "TICKETS":
-        console.log("Tickets");
         send.func.sendTicketMessage(id);
         break;
       case "BUY_TICKETS":
@@ -39,11 +42,11 @@ const handleMessage = (id, received_message) => {
         send.func.sendAllTicketOptionsMessage(id);
         break;
       case "DONE":
-        console.log("User says: done.");
+        // console.log("User says: done.");
         send.func.sendStartMessage(id);
         break;
       default:
-        console.log("None of the above");
+        // console.log("None of the above");
         send.func.sendFailMessage(id);
         break;
     }

@@ -27,6 +27,14 @@ const buyTicketMessage = [
   }
 ];
 
+const exhibitionsMessage = [
+  carousels.value.exhibitionsCarousel,
+  {
+    text: "Möchtest du Information zu weiteren Angeboten?",
+    quick_replies: buttons.but.qr_exhibitionMenu
+  }
+]
+
 const failMessage = [
   {
     text: "Tut mir leid, aber deine Eingabe kann ich nicht verarbeiten"
@@ -228,6 +236,7 @@ const yearTicketMessage = [
 exports.data = {
   allTicketOptionsMessage,
   buyTicketMessage,
+  exhibitionsMessage,
   failMessage,
   getStarted,
   greetingText,
