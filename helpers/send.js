@@ -67,6 +67,10 @@ const sendMiTicketMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.miTicketMessage)
 };
 
+const sendNextEventMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.nextEventMessage)
+};
+
 const sendOpeningHours = (recipientId) => {
   sendMessage(recipientId, messages.data.openingHours)
 };
@@ -109,6 +113,7 @@ exports.func = {
   sendExhibitionsMessage,
   sendFailMessage,
   sendMiTicketMessage,
+  sendNextEventMessage,
   sendOpeningHours,
   sendOpeningHoursHolidays,
   sendStartMessage,

@@ -158,7 +158,43 @@ const exhibitionsCarousel = {
   }
 }
 
+const nextEventGeneric = {
+  attachment: {
+    type: "template",
+    payload: {
+      template_type: "generic",
+      elements: [
+        {
+          title: "Gegenüberstellungen - Zwei Experten unterschiedlicher Disziplinen führen...",
+          image_url: "https://smb.gomus.de/production/products/102715/original/J_csm_SLIDER5_GREY_xl_e9ec32c40b_xl.jpg.jpg?1507900132",
+          subtitle: "Samstag, den 07.04.2018 um 15 Uhr\nKosten 4€ zzgl. Eintritt",
+          default_action: {
+            type: "web_url",
+            url: "https://www.smb.museum/museen-und-einrichtungen/bode-museum/bildung-vermittlung/angebote.html?tx_smb_pi1%5Bevent_id%5D=100393&cHash=f340710b335aaab7059297df8ae13c79",
+            webview_height_ratio: consts.value.defaultWebviewHeightRatio
+          },
+          buttons: [
+            {
+              type: "web_url",
+              url: "https://www.smb.museum/museen-und-einrichtungen/bode-museum/bildung-vermittlung/angebote.html?tx_smb_pi1%5Bevent_id%5D=100393&cHash=f340710b335aaab7059297df8ae13c79",
+              title: "Information",
+              webview_height_ratio: consts.value.defaultWebviewHeightRatio
+            },
+            {
+              type: "web_url",
+              url: "https://shop.smb.museum/#/product/event/102715?date=2018-03-31&date_id=78401",
+              title: "Tickets",
+              webview_height_ratio: consts.value.defaultWebviewHeightRatio
+            }
+          ]
+        }
+      ]
+    }
+  }
+};
+
 exports.value = {
   allTicketOptionsCarousel,
-  exhibitionsCarousel
+  exhibitionsCarousel,
+  nextEventGeneric
 }

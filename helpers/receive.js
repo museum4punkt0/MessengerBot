@@ -12,6 +12,7 @@ const handleMessage = (id, received_message) => {
         send.func.sendExhibitionsMessage(id);
         break;
       case "NEXT_EVENT":
+        send.func.sendNextEventMessage(id);
         break;
       case "EVENTS_KIDS":
         break;
@@ -42,11 +43,9 @@ const handleMessage = (id, received_message) => {
         send.func.sendAllTicketOptionsMessage(id);
         break;
       case "DONE":
-        // console.log("User says: done.");
         send.func.sendStartMessage(id);
         break;
       default:
-        // console.log("None of the above");
         send.func.sendFailMessage(id);
         break;
     }

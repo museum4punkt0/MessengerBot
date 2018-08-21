@@ -79,6 +79,14 @@ const miTicketMessage = [
   }
 ];
 
+const nextEventMessage = [
+  carousels.value.nextEventGeneric,
+  {
+    text: "Möchtest du Information zu weiteren Angeboten?",
+    quick_replies: buttons.but.qr_exhibitionMenu
+  }
+]
+
 const openingHours = [
   {
     text: `Heute geöffnet bis 18:00 Uhr`
@@ -241,6 +249,7 @@ exports.data = {
   getStarted,
   greetingText,
   miTicketMessage,
+  nextEventMessage,
   openingHours,
   openingHoursHolidays,
   persistentMenu,
