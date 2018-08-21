@@ -38,6 +38,11 @@ const qr_tickets = [
   },
   {
     content_type: "text",
+    title: "alle Optionen",
+    payload: "ALL_TICKET_OPTIONS"
+  },
+  {
+    content_type: "text",
     title: "Am selben Tag",
     payload: "MI_TICKET"
   },
@@ -50,11 +55,6 @@ const qr_tickets = [
     content_type: "text",
     title: "über das Jahr",
     payload: "YEAR_TICKET"
-  },
-  {
-    content_type: "text",
-    title: "alle Optionen",
-    payload: "ALL_TICKET_OPTIONS"
   }
 ];
 
