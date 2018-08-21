@@ -21,6 +21,60 @@ const qr_exhibitionMenu = [
   }
 ];
 
+const qr_exhibitionMenu_whNextEvent = [
+  {
+    content_type: "text",
+    title: "Angebote für Kinder",
+    payload: "EVENTS_KIDS"
+  },
+  {
+    content_type: "text",
+    title: "Angebote für Erwachsene",
+    payload: "EVENTS_ADULTS"
+  },
+  {
+    content_type: "text",
+    title: "Nein, danke.",
+    payload: "DONE"
+  }
+];
+
+const qr_exhibitionMenu_whEventKids = [
+   {
+    content_type: "text",
+    title: "nächste Veranstaltung",
+    payload: "NEXT_EVENT"
+  },
+  {
+    content_type: "text",
+    title: "Angebote für Erwachsene",
+    payload: "EVENTS_ADULTS"
+  },
+  {
+    content_type: "text",
+    title: "Nein, danke.",
+    payload: "DONE"
+  }
+];
+
+const qr_exhibitionMenu_whEventsAdults = [
+   {
+    content_type: "text",
+    title: "nächste Veranstaltung",
+    payload: "NEXT_EVENT"
+  },
+  {
+    content_type: "text",
+    title: "Angebote für Kinder",
+    payload: "EVENTS_KIDS"
+  },
+  {
+    content_type: "text",
+    title: "Nein, danke.",
+    payload: "DONE"
+  }
+];
+
 const qr_openingHours = [
   {
     content_type: "text",
@@ -101,6 +155,9 @@ const qr_ticketMenu = [
 
 exports.but = {
   qr_exhibitionMenu,
+  qr_exhibitionMenu_whNextEvent,
+  qr_exhibitionMenu_whEventKids,
+  qr_exhibitionMenu_whEventsAdults,
   qr_openingHours,
   qr_standardMenu,
   qr_tickets,

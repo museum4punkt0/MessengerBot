@@ -55,6 +55,14 @@ const sendBuyTicketMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.buyTicketMessage)
 };
 
+const sendEventsAdultsMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.eventsAdultsMessage)
+};
+
+const sendEventsKidsMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.eventsKidsMessage)
+};
+
 const sendExhibitionsMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.exhibitionsMessage)
 };
@@ -110,6 +118,8 @@ const sendHelloMessage = (recipientId) => {
 exports.func = {
   sendAllTicketOptionsMessage,
   sendBuyTicketMessage,
+  sendEventsAdultsMessage,
+  sendEventsKidsMessage,
   sendExhibitionsMessage,
   sendFailMessage,
   sendMiTicketMessage,

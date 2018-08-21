@@ -1,6 +1,7 @@
 const buttons = require('./buttons');
 const carousels = require('./carousels');
 const links = require('./links');
+const lists = require('./lists');
 
 
 const startText = "Wie kann ich weiterhelfen!";
@@ -26,6 +27,22 @@ const buyTicketMessage = [
     quick_replies: buttons.but.qr_standardMenu
   }
 ];
+
+const eventsAdultsMessage = [
+  lists.value.eventsAdultsList,
+  {
+    text: "Möchtest du Information zu weiteren Angeboten?",
+    quick_replies: buttons.but.qr_exhibitionMenu_whEventsAdults
+  }
+]
+
+const eventsKidsMessage = [
+  lists.value.eventsKidsList,
+  {
+    text: "Möchtest du Information zu weiteren Angeboten?",
+    quick_replies: buttons.but.qr_exhibitionMenu_whEventKids
+  }
+]
 
 const exhibitionsMessage = [
   carousels.value.exhibitionsCarousel,
@@ -83,7 +100,7 @@ const nextEventMessage = [
   carousels.value.nextEventGeneric,
   {
     text: "Möchtest du Information zu weiteren Angeboten?",
-    quick_replies: buttons.but.qr_exhibitionMenu
+    quick_replies: buttons.but.qr_exhibitionMenu_whNextEvent
   }
 ]
 
@@ -244,6 +261,8 @@ const yearTicketMessage = [
 exports.data = {
   allTicketOptionsMessage,
   buyTicketMessage,
+  eventsAdultsMessage,
+  eventsKidsMessage,
   exhibitionsMessage,
   failMessage,
   getStarted,

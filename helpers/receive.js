@@ -1,4 +1,5 @@
 /* eslint no-console: "log" */
+/* eslint max-lines-per-function: ["error", 100] */
 
 const send = require('./send');
 // const threadSetup = require('./threadsetup');
@@ -15,8 +16,10 @@ const handleMessage = (id, received_message) => {
         send.func.sendNextEventMessage(id);
         break;
       case "EVENTS_KIDS":
+        send.func.sendEventsKidsMessage(id);
         break;
       case "EVENTS_ADULTS":
+        send.func.sendEventsAdultsMessage(id);
         break;
       case "OPENING_HOURS":
         send.func.sendOpeningHours(id);
