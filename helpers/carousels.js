@@ -51,6 +51,52 @@ const allTicketOptionsCarousel = {
               webview_height_ratio: consts.value.defaultWebviewHeightRatio,
             }
           ]
+        },
+        {
+          title: "Museumspass Berlin",
+          subtitle:"1 Ticket - 30 Häuser:\nregulär 29€ - ermäßigt 14,50€",
+          default_action: {
+            type: "web_url",
+            url:"https://www.smb.museum/?id=2951",
+            webview_height_ratio: consts.value.defaultWebviewHeightRatio,
+          },
+          buttons: [
+            {
+              type: "web_url",
+              url:"https://www.smb.museum/?id=2951",
+              title: "Infos",
+              webview_height_ratio: consts.value.defaultWebviewHeightRatio,
+            },
+            {
+              type: "web_url",
+              url: "https://shop.smb.museum/#/tickets/list?date=2018-08-21&ticketSelection=%5Bobject%20Object%5D",
+              title: "Museumspass",
+              webview_height_ratio: consts.value.defaultWebviewHeightRatio,
+            }
+          ]
+        },
+        {
+          title: "Jahreskarte",
+          subtitle:"CLASSIC (Dauerausstellungen):\nregulär 50 - ermäßigt 25€\n\nCLASSIC PLUS (mit Sonderausstellungen):\nregulär 100 - ermäßigt 50€",
+          default_action: {
+            type: "web_url",
+            url:"https://www.smb.museum/besuch-planen/jahreskarte.html",
+            webview_height_ratio: consts.value.defaultWebviewHeightRatio,
+          },
+          buttons: [
+            {
+              type: "web_url",
+              url:"https://www.smb.museum/besuch-planen/jahreskarte.html",
+              title: "Infos",
+              webview_height_ratio: consts.value.defaultWebviewHeightRatio,
+            },
+            {
+              type: "web_url",
+              url: "https://jahreskarte.smb.museum/",
+              title: "Jahreskarte",
+              webview_height_ratio: consts.value.defaultWebviewHeightRatio,
+            }
+          ]
         }
       ]
     }
