@@ -1,4 +1,4 @@
-const qr_tickets = [
+const qr_exhibitionMenu = [
    {
     content_type: "text",
     title: "nächste Veranstaltung",
@@ -100,6 +100,7 @@ const qr_ticketMenu = [
 ];
 
 exports.but = {
+  qr_exhibitionMenu,
   qr_openingHours,
   qr_standardMenu,
   qr_tickets,
