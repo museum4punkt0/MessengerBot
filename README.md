@@ -10,7 +10,7 @@
 - [x] Thread Setup [läuft!] (Get Started, Begrüßung)
 - [ ] Begrüßung & Datenschutz formulieren!
 - [ ] Menü
-- [ ] Links
-- [ ] Carousels
-- [ ] Lists
-- [ ] Alten Stand einpflegen
+- [x] Links
+- [x] Carousels
+- [x] Lists
+- [x] Alten Stand einpflegen
