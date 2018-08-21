@@ -1,9 +1,20 @@
 const buttons = require('./buttons');
+const carousels = require('./carousels');
 const links = require('./links');
+
 
 const startText = "Wie kann ich weiterhelfen!";
 const startTextSecondTime = "Kann sonst noch helfen?";
 const ticketOptions = "Möchtest du alle weitere Ticket-Optionen erfahren?";
+
+const allTicketOptionsMessage = [
+  carousels.value.allTicketOptionsCarousel,
+  {
+    text: startTextSecondTime,
+    quick_replies: buttons.but.qr_standardMenu
+  }
+]
+
 
 const buyTicketMessage = [
   {
@@ -215,6 +226,7 @@ const yearTicketMessage = [
 ]
 
 exports.data = {
+  allTicketOptionsMessage,
   buyTicketMessage,
   failMessage,
   getStarted,

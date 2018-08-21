@@ -47,6 +47,10 @@ const sendMessage = (recipientId, messagePayloads) => {
 
 
 // Hier Nachrichten aufrufen, die Inhalte sind in messages.js definiert!
+const sendAllTicketOptionsMessage = (recipientId) => {
+  sendMessage(recipientId, messages.data.allTicketOptionsMessage)
+};
+
 const sendBuyTicketMessage = (recipientId) => {
   sendMessage(recipientId, messages.data.buyTicketMessage)
 };
@@ -96,6 +100,7 @@ const sendHelloMessage = (recipientId) => {
 };
 
 exports.func = {
+  sendAllTicketOptionsMessage,
   sendBuyTicketMessage,
   sendFailMessage,
   sendMiTicketMessage,
