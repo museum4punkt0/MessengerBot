@@ -24,7 +24,7 @@ const allTicketOptionsCarousel = {
             {
               type: "web_url",
               url: "https://shop.smb.museum/#/tickets/list?date=2018-08-21&museum_id=27&ticketSelection=%5Bobject%20Object%5D",
-              title: "Tickets",
+              title: "Tickets Bode-Museum",
               webview_height_ratio: consts.value.defaultWebviewHeightRatio,
             }
           ]
@@ -47,7 +47,7 @@ const allTicketOptionsCarousel = {
             {
               type: "web_url",
               url: "https://shop.smb.museum/#/tickets/list?date=2018-08-21&museum_id=76&ticketSelection=%5Bobject%20Object%5D",
-              title: "Tickets",
+              title: "Tickets Museumsinsel",
               webview_height_ratio: consts.value.defaultWebviewHeightRatio,
             }
           ]
@@ -77,7 +77,7 @@ const allTicketOptionsCarousel = {
         },
         {
           title: "Jahreskarte",
-          subtitle:"CLASSIC (Dauerausstellungen):\nregulär 50 - ermäßigt 25€\n\nCLASSIC PLUS (mit Sonderausstellungen):\nregulär 100 - ermäßigt 50€",
+          subtitle:"CLASSIC: regulär 50 - ermäßigt 25€\nCLASSIC PLUS:regulär 100 - ermäßigt 50€",
           default_action: {
             type: "web_url",
             url:"https://www.smb.museum/besuch-planen/jahreskarte.html",
