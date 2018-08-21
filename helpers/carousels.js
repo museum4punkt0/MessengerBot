@@ -77,7 +77,7 @@ const allTicketOptionsCarousel = {
         },
         {
           title: "Jahreskarte",
-          subtitle:"CLASSIC: regulär 50 - ermäßigt 25€\nCLASSIC PLUS:regulär 100 - ermäßigt 50€",
+          subtitle:"CLASSIC: regulär 50€ - ermäßigt 25€\nCLASSIC PLUS: regulär 100€ - ermäßigt 50€",
           default_action: {
             type: "web_url",
             url:"https://www.smb.museum/besuch-planen/jahreskarte.html",
